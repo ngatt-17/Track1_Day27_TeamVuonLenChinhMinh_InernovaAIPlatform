@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Day27_AI-Team-Lab_TeamVuonLenChinhMinh</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    font-size: 11.5px;
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 100%;
+    height: 275mm;
+    max-height: 275mm;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2mm 0;
+    position: relative;
+  }
+
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  .page-header {
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .page-header .brand {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1e3a8a;
+    letter-spacing: -0.3px;
+  }
+
+  .page-header .brand span {
+    color: #2563eb;
+  }
+
+  .page-header .page-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #bfdbfe;
+  }
+
+  .page-footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #64748b;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 6px 0 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 13px;
+    background: #2563eb;
+    border-radius: 2px;
+  }
+
+  .card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 7px 10px;
+    margin-bottom: 6px;
+  }
+
+  .card-blue {
+    background: #f0f7ff;
+    border-color: #bfdbfe;
+  }
+
+  .card-amber {
+    background: #fffbeb;
+    border-color: #fde68a;
+  }
+
+  .card-green {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4px 0 6px 0;
+    font-size: 10.5px;
+  }
+
+  th, td {
+    padding: 4px 6px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: #f1f5f9;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1.5px 5px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  .badge-red { background: #fee2e2; color: #991b1b; }
+  .badge-green { background: #dcfce7; color: #166534; }
+  .badge-blue { background: #dbeafe; color: #1e40af; }
+  .badge-amber { background: #fef3c7; color: #92400e; }
+  .badge-slate { background: #f1f5f9; color: #475569; }
+
+  ul, ol {
+    margin-left: 14px;
+    margin-bottom: 4px;
+  }
+
+  li {
+    margin-bottom: 2px;
+  }
+
+  p {
+    margin-bottom: 4px;
+  }
+
+  strong {
+    color: #0f172a;
+  }
+
+  .quote-box {
+    border-left: 3px solid #2563eb;
+    padding: 5px 10px;
+    background: #f8fafc;
+    font-style: italic;
+    margin: 4px 0;
+    border-radius: 0 4px 4px 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== TRANG 1 ==================== -->
+<div class="page">
+  <div>
+    <div class="page-header">
+      <div>
+        <div class="brand">INTERNOVA <span>AI PLATFORM</span></div>
+        <div style="font-size: 10px; color: #64748b;">AI-powered Internship Support Platform · Team Vươn Lên Chính Mình</div>
+      </div>
+      <div class="page-tag">Trang 1 / 4 · Stakeholder Map & Strategy</div>
+    </div>
+
+    <!-- Khung thông tin Scope -->
+    <div class="card card-blue" style="margin-bottom: 6px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div><strong>Dự án:</strong> Internova AI Platform (Quản lý & Hỗ trợ Thực tập Thông minh)</div>
+        <div><strong>Trưởng nhóm:</strong> Tạ Thị Nga (Tech Lead / AI Engineer)</div>
+      </div>
+      <div style="margin-top: 2px; font-size: 10.5px; color: #1e40af;">
+        <strong>Mục tiêu 1–3 tháng tới:</strong> Hoàn thiện MVP tích hợp RAG trích dẫn quy chế đạt Groundedness ≥ 90%, triển khai thử nghiệm Pilot thành công cho 100 sinh viên và 3 giảng viên Khoa CNTT tại trường đại học đối tác.
+      </div>
+    </div>
+
+    <div class="section-title">1. Ma trận Stakeholder Map (Influence × Interest & Stance)</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 14%;">Nhãn Ma trận</th>
+          <th style="width: 25%;">Stakeholder cụ thể & Đơn vị</th>
+          <th style="width: 10%; text-align: center;">Influence</th>
+          <th style="width: 10%; text-align: center;">Interest</th>
+          <th style="width: 15%; text-align: center;">Thái độ (Stance)</th>
+          <th>Lý do & Động cơ thực tế</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge badge-red">Blocker</span></td>
+          <td><strong>TS. Nguyễn Minh Tuấn</strong><br><small>Trưởng phòng Đào tạo & QL Thực tập</small></td>
+          <td style="text-align: center;"><strong>Cao</strong></td>
+          <td style="text-align: center;">Trung bình</td>
+          <td style="text-align: center;"><span class="badge badge-amber">Chưa ủng hộ / E ngại</span></td>
+          <td>Lo ngại AI hallucination đưa sai quy chế tốt nghiệp, gây rủi ro pháp lý và rò rỉ dữ liệu sinh viên. Có quyền quyết định duyệt pilot.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-green">Champion</span></td>
+          <td><strong>ThS. Hoàng Thu Hà</strong><br><small>GV điều phối thực tập Khoa CNTT</small></td>
+          <td style="text-align: center;"><strong>Cao</strong></td>
+          <td style="text-align: center;"><strong>Cao</strong></td>
+          <td style="text-align: center;"><span class="badge badge-green">Ủng hộ mạnh mẽ</span></td>
+          <td>Quá tải vì hàng trăm email hỏi trùng lặp về thủ tục, biểu mẫu. Cần dashboard theo dõi sinh viên nộp báo cáo đúng hạn.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-blue">Supporter</span></td>
+          <td><strong>Bạn Trần Đức Anh</strong><br><small>Đại diện Sinh viên năm 3 sắp thực tập</small></td>
+          <td style="text-align: center;">Thấp</td>
+          <td style="text-align: center;"><strong>Cao</strong></td>
+          <td style="text-align: center;"><span class="badge badge-blue">Rất ủng hộ</span></td>
+          <td>Rất cần công cụ tự động tra cứu deadline, tải form mẫu và kiểm tra CV khớp với JD doanh nghiệp; hưởng lợi trực tiếp từ AI.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-slate">Bystander</span></td>
+          <td><strong>Chị Vũ Mai Lan</strong><br><small>HR Lead Doanh nghiệp đối tác</small></td>
+          <td style="text-align: center;">Thấp</td>
+          <td style="text-align: center;">Thấp</td>
+          <td style="text-align: center;"><span class="badge badge-slate">Trung lập</span></td>
+          <td>Chỉ quan tâm nhận được hồ sơ sinh viên chất lượng, chuẩn quy cách; chưa có thời gian tìm hiểu sâu về giải pháp nội bộ trường.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-green">Champion</span></td>
+          <td><strong>Cố vấn Chuyên môn AI</strong><br><small>Mentor Đề án nghiên cứu</small></td>
+          <td style="text-align: center;"><strong>Cao</strong></td>
+          <td style="text-align: center;"><strong>Cao</strong></td>
+          <td style="text-align: center;"><span class="badge badge-green">Ủng hộ mạnh mẽ</span></td>
+          <td>Mong muốn kiến trúc RAG & Guardrails được kiểm thử bài bản, sẵn sàng hỗ trợ định hướng kỹ thuật và phương pháp đánh giá AI.</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-red">Blocker</span></td>
+          <td><strong>Thầy Đặng Quốc Việt</strong><br><small>Đại diện Trung tâm CNTT Nhà trường</small></td>
+          <td style="text-align: center;"><strong>Cao</strong></td>
+          <td style="text-align: center;">Thấp</td>
+          <td style="text-align: center;"><span class="badge badge-amber">Cẩn trọng</span></td>
+          <td>Quan tâm đến an toàn thông tin, rủi ro tải máy chủ và bảo vệ dữ liệu cá nhân sinh viên; cần làm rõ ranh giới kiến trúc Cloud.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title">2. Chiến lược cụ thể cho 4 Stakeholder ưu tiên (1–2 tuần tới)</div>
+    <div class="grid-2">
+      <!-- 2 Champion / Supporter -->
+      <div class="card card-green">
+        <div style="font-weight: 700; color: #166534; font-size: 11px; margin-bottom: 3px;">
+          TẬN DỤNG SỰ ỦNG HỘ (CHAMPIONS & SUPPORTERS)
+        </div>
+        <p><strong>1. ThS. Hoàng Thu Hà (GV điều phối Khoa CNTT):</strong></p>
+        <ul style="font-size: 10.5px;">
+          <li><em>Quan tâm:</em> Giảm áp lực giải đáp lặp lại; theo dõi sinh viên trễ hạn báo cáo.</li>
+          <li><em>Cách giúp:</em> Cung cấp toàn bộ sổ tay thực tập chuẩn & kết nối 100 sv pilot.</li>
+          <li><em>Hành động 7 ngày tới:</em> Cùng chuẩn hóa bộ Handbook thực tập nạp vào KB; bàn giao tài khoản Lecturer Portal thử nghiệm trước 17h00 thứ Sáu (04/09).</li>
+        </ul>
+        <p style="margin-top: 4px;"><strong>2. Cố vấn Chuyên môn AI (Mentor kỹ thuật):</strong></p>
+        <ul style="font-size: 10.5px;">
+          <li><em>Quan tâm:</em> Kiểm soát độ trễ, chống hallucination & độ chính xác RAG.</li>
+          <li><em>Cách giúp:</em> Đánh giá phương pháp luận, tư vấn framework đo lường.</li>
+          <li><em>Hành động 10 ngày tới:</em> Gửi báo cáo kiểm thử latency (P95 < 1.8s) và bộ 30 test cases kiểm thử RAG trước buổi review kỹ thuật ngày 06/09.</li>
+        </ul>
+      </div>
+
+      <!-- 2 Blocker / Cần thuyết phục -->
+      <div class="card card-amber">
+        <div style="font-weight: 700; color: #92400e; font-size: 11px; margin-bottom: 3px;">
+          ƯU TIÊN THUYẾT PHỤC & XỬ LÝ RỦI RO (BLOCKERS)
+        </div>
+        <p><strong>3. TS. Nguyễn Minh Tuấn (Trưởng phòng Đào tạo):</strong></p>
+        <ul style="font-size: 10.5px;">
+          <li><em>Quan tâm:</em> Tính chuẩn xác quy chế, bảo mật dữ liệu, tránh rủi ro pháp lý.</li>
+          <li><em>Rủi ro cản trở:</em> Có quyền phủ quyết hoặc hoãn triển khai pilot toàn trường.</li>
+          <li><em>Hành động 7 ngày tới:</em> Soạn thảo cam kết an toàn "Privacy by Design" + demo 20 câu hỏi quy chế có trích dẫn điều khoản; xin họp 20 phút sáng thứ Ba (08/09).</li>
+        </ul>
+        <p style="margin-top: 4px;"><strong>4. Thầy Đặng Quốc Việt (Trung tâm CNTT Nhà trường):</strong></p>
+        <ul style="font-size: 10.5px;">
+          <li><em>Quan tâm:</em> Tải hạ tầng mạng, rủi ro bảo mật dữ liệu cá nhân sinh viên.</li>
+          <li><em>Rủi ro cản trở:</em> Từ chối hỗ trợ tích hợp hoặc xác thực sinh viên.</li>
+          <li><em>Hành động 10 ngày tới:</em> Gửi tài liệu mô tả kiến trúc phân tách độc lập trên Cloud, chứng minh hệ thống không lưu trữ mật khẩu hay dữ liệu nhạy cảm nội bộ.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Track 1 - Day 27: AI Team Lab · Internova AI Platform</div>
+    <div>Trang 1 / 4</div>
+  </div>
+</div>
+
+<!-- ==================== TRANG 2 ==================== -->
+<div class="page">
+  <div>
+    <div class="page-header">
+      <div>
+        <div class="brand">INTERNOVA <span>AI PLATFORM</span></div>
+        <div style="font-size: 10px; color: #64748b;">Pitch "Kết luận trước" & Ma trận phân nhiệm RACI</div>
+      </div>
+      <div class="page-tag">Trang 2 / 4 · Pitch & RACI Matrix</div>
+    </div>
+
+    <div class="section-title">1. Pitch gửi Lãnh đạo Trường & Phòng Đào tạo (Conclusion First)</div>
+    
+    <div class="card card-blue" style="margin-bottom: 6px;">
+      <div style="font-weight: 700; color: #1e40af; font-size: 11px; margin-bottom: 2px;">
+        [KẾT LUẬN / ĐỀ XUẤT TRƯỚC]
+      </div>
+      <div style="font-size: 11px; font-weight: 600; color: #0f172a;">
+        Đề xuất Ban Đào tạo phê duyệt triển khai thử nghiệm (Pilot) nền tảng Internova AI Platform trong 4 tuần cho 100 sinh viên và 3 giảng viên Khoa CNTT trong kỳ thực tập sắp tới, bắt đầu từ ngày 15/09/2026.
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 6px;">
+      <div class="card">
+        <strong>1. Giảm 70% áp lực hành chính</strong>
+        <p style="font-size: 10px; color: #475569; margin-top: 2px;">Tự động hóa 24/7 toàn bộ giải đáp về thủ tục, biểu mẫu, quy trình qua AI Assistant chuyên biệt, giúp giảng viên tập trung vào hướng dẫn chuyên môn.</p>
+      </div>
+      <div class="card">
+        <strong>2. Giảm thiểu trễ hạn hồ sơ</strong>
+        <p style="font-size: 10px; color: #475569; margin-top: 2px;">Hệ thống theo dõi tiến độ thời gian thực, nhắc lịch nộp báo cáo và cảnh báo sớm sinh viên có nguy cơ chậm tiến độ cho giảng viên phụ trách.</p>
+      </div>
+      <div class="card">
+        <strong>3. Căn cứ quy định chính thức</strong>
+        <p style="font-size: 10px; color: #475569; margin-top: 2px;">Kiến trúc RAG có trích dẫn văn bản bắt buộc (tên quyết định, số điều), loại bỏ tình trạng sinh viên hỏi truyền miệng hoặc hiểu sai quy chế.</p>
+      </div>
+    </div>
+
+    <div class="card card-green" style="margin-bottom: 6px;">
+      <div style="font-weight: 700; color: #166534; font-size: 11px; margin-bottom: 2px;">
+        [BẰNG CHỨNG & DỮ LIỆU THỰC NGHIỆM]
+      </div>
+      <div style="font-size: 10.5px; color: #14532d;">
+        • Đã hoàn thiện phiên bản MVP và kiểm thử nội bộ trên bộ <strong>50 câu hỏi quy chế thực tế</strong>: Tỷ lệ trả lời chính xác có trích dẫn (Citation Accuracy) đạt <strong>94%</strong>, 0% hallucination ngoài phạm vi tài liệu.<br>
+        • 100% giảng viên thử nghiệm đánh giá giao diện quản lý tiến độ trực quan, tiết kiệm trung bình <strong>3.5 giờ/tuần</strong> xử lý thắc mắc sinh viên.<br>
+        • Bộ lọc Guardrails & Semantic Routing từ chối 100% các câu hỏi nằm ngoài phạm vi nghiệp vụ thực tập.
+      </div>
+      <div style="margin-top: 4px; padding-top: 3px; border-top: 1px dashed #86efac; font-size: 10.5px;">
+        <strong>[SMALL ASK — ĐỀ NGHỊ HÀNH ĐỘNG NHỎ]:</strong> Kính đề nghị Thầy/Cô dành <strong>30 phút vào thứ Năm tuần này (10/09 lúc 09h00)</strong> để nhóm demo trực tiếp 5 tình huống thực tế và thống nhất danh sách sinh viên tham gia đợt pilot.
+      </div>
+    </div>
+
+    <div class="section-title">2. Phản biện chính & Phương án xử lý có căn cứ</div>
+    <div class="card card-amber" style="margin-bottom: 6px;">
+      <div style="font-size: 10.5px;">
+        <strong>Phản biện lớn nhất:</strong> <em>"Nếu AI bị hallucination trả lời sai quy chế khiến sinh viên lỡ hạn tốt nghiệp, hoặc hệ thống làm lộ dữ liệu cá nhân của sinh viên thì nhà trường chịu rủi ro rất lớn."</em>
+      </div>
+      <div style="font-size: 10.5px; margin-top: 3px; color: #78350f;">
+        <strong>Phương án xử lý:</strong> (1) <strong>Strict Guardrails & Citation:</strong> AI chỉ sinh câu trả lời khi có bằng chứng trong Knowledge Base chính thức và bắt buộc dẫn nguồn (Điều/Khoản). Nếu độ tin cậy < 80%, AI tự động chuyển sang câu trả lời an toàn: <em>"Quy định này chưa có trong văn bản, vui lòng liên hệ GV hướng dẫn."</em> (2) <strong>Privacy by Design:</strong> Tách biệt luồng hỏi quy định chung và dữ liệu cá nhân; thông tin sinh viên được mã hóa trong PostgreSQL nội bộ, cam kết không dùng để huấn luyện bất kỳ mô hình công cộng nào.
+      </div>
+    </div>
+
+    <div class="section-title">3. Ma trận phân công trách nhiệm RACI Matrix (1–2 tháng tới)</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 5%; text-align: center;">STT</th>
+          <th>Công việc trọng tâm</th>
+          <th style="width: 17%; text-align: center;">AI Engineer<br><small>Tạ Thị Nga</small></th>
+          <th style="width: 17%; text-align: center;">Fullstack Dev<br><small>Nguyễn Văn Bình</small></th>
+          <th style="width: 17%; text-align: center;">Product Lead<br><small>Lê Thị Mai</small></th>
+          <th style="width: 17%; text-align: center;">Giảng viên / Đào tạo<br><small>ThS. Hoàng Thu Hà</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">1</td>
+          <td><strong>Xác định Use Case, ranh giới Guardrails & kịch bản hội thoại</strong></td>
+          <td style="text-align: center;">C</td>
+          <td style="text-align: center;">I</td>
+          <td style="text-align: center;"><span class="badge badge-red">A</span> (Chịu trách nhiệm)</td>
+          <td style="text-align: center;">C (Tư vấn)</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">2</td>
+          <td><strong>Thu thập, số hóa & chuẩn hóa Knowledge Base quy chế thực tập</strong></td>
+          <td style="text-align: center;">C</td>
+          <td style="text-align: center;">I</td>
+          <td style="text-align: center;"><span class="badge badge-red">A</span> (Chịu trách nhiệm)</td>
+          <td style="text-align: center;">C (Cung cấp)</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">3</td>
+          <td><strong>Xây dựng & tối ưu RAG Pipeline (Embedding, Hybrid Search, Citation)</strong></td>
+          <td style="text-align: center;"><span class="badge badge-red">A</span> (Chịu trách nhiệm)</td>
+          <td style="text-align: center;">C</td>
+          <td style="text-align: center;">C</td>
+          <td style="text-align: center;">I</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">4</td>
+          <td><strong>Phát triển Web Portal (Student, Lecturer, Admin) & tích hợp API</strong></td>
+          <td style="text-align: center;">C</td>
+          <td style="text-align: center;"><span class="badge badge-red">A</span> (Chịu trách nhiệm)</td>
+          <td style="text-align: center;">C</td>
+          <td style="text-align: center;">I</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">5</td>
+          <td><strong>Thiết lập bộ Benchmark đánh giá chất lượng AI (AI Evals & Golden Cases)</strong></td>
+          <td style="text-align: center;"><span class="badge badge-red">A</span> (Chịu trách nhiệm)</td>
+          <td style="text-align: center;">I</td>
+          <td style="text-align: center;">C</td>
+          <td style="text-align: center;">C (Duyệt đáp án)</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">6</td>
+          <td><strong>Tổ chức vận hành chương trình Pilot thực tế & thu thập phản hồi</strong></td>
+          <td style="text-align: center;">I</td>
+          <td style="text-align: center;">I</td>
+          <td style="text-align: center;"><span class="badge badge-red">A</span> (Chịu trách nhiệm)</td>
+          <td style="text-align: center;">C (Phối hợp)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="font-size: 9.5px; color: #64748b; margin-top: 1px;">
+      *Quy tắc chuẩn: Mỗi hàng chỉ có DUY NHẤT 1 người chịu trách nhiệm cuối cùng (A - Accountable). R = Responsible, C = Consulted, I = Informed.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Track 1 - Day 27: AI Team Lab · Internova AI Platform</div>
+    <div>Trang 2 / 4</div>
+  </div>
+</div>
+
+<!-- ==================== TRANG 3 ==================== -->
+<div class="page">
+  <div>
+    <div class="page-header">
+      <div>
+        <div class="brand">INTERNOVA <span>AI PLATFORM</span></div>
+        <div style="font-size: 10px; color: #64748b;">Thiết kế cấu trúc đội ngũ AI & Chiến lược bổ sung năng lực</div>
+      </div>
+      <div class="page-tag">Trang 3 / 4 · AI Team Design</div>
+    </div>
+
+    <div class="section-title">1. Lựa chọn AI Team Architecture: Embedded Cross-functional Squad</div>
+    <div class="card card-blue" style="font-size: 10.5px;">
+      <strong>Mô hình lựa chọn:</strong> <strong>Embedded Squad</strong> (Nhóm tích hợp đa chức năng gắn liền với sản phẩm).<br>
+      <strong>Lý do lựa chọn:</strong> Internova hiện ở giai đoạn MVP tiền mở rộng (Seed Stage), chỉ tập trung vào một sản phẩm duy nhất. Quy mô team 3–4 người đòi hỏi sự gắn kết tuyệt đối giữa logic nghiệp vụ thực tập, giao diện người dùng và thuật toán AI. Mô hình Embedded giúp kỹ sư AI, kỹ sư Fullstack và Product Lead ngồi chung, giải quyết vấn đề tức thì, tránh sự phân tán nguồn lực và độ trễ giao tiếp của mô hình Centralized.
+    </div>
+
+    <div class="section-title">2. Phân loại vai trò: Core Roles (Hiện tại) & Extended Roles (Giai đoạn mở rộng)</div>
+    <div class="grid-2" style="margin-bottom: 6px;">
+      <div class="card">
+        <div style="font-weight: 700; color: #1e3a8a; font-size: 11px; margin-bottom: 2px;">
+          CORE ROLES (Giai đoạn hiện tại - Cần ngay)
+        </div>
+        <ul style="font-size: 10px;">
+          <li><strong>AI Engineer / RAG Specialist:</strong> Làm chủ RAG architecture, semantic routing, vector indexing, prompt engineering, guardrails và AI observability.</li>
+          <li><strong>Fullstack / Backend Developer:</strong> Xây dựng backend FastAPI, database PostgreSQL, giao diện Next.js, quản lý tiến độ thực tập và tích hợp API bảo mật.</li>
+          <li><strong>AI Product & Domain Lead:</strong> Thấu hiểu quy trình thực tập đại học, kiểm định chất lượng Knowledge Base, trải nghiệm người dùng và tiếp nhận phản hồi trường.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div style="font-weight: 700; color: #475569; font-size: 11px; margin-bottom: 2px;">
+          EXTENDED ROLES (Giai đoạn mở rộng sang nhiều trường)
+        </div>
+        <ul style="font-size: 10px;">
+          <li><strong>MLOps & Continuous Evals Engineer:</strong> Tự động hóa pipeline đánh giá chất lượng mô hình, quản lý latency, caching và chi phí token khi lượng truy vấn lớn.</li>
+          <li><strong>Data Privacy & Security Specialist:</strong> Rà soát và đảm bảo hệ thống tuân thủ Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân học sinh - sinh viên.</li>
+          <li><strong>Industry Partnership Lead:</strong> Mở rộng mạng lưới đối tác doanh nghiệp cung cấp Job Description chuẩn và cơ hội tuyển dụng cho sinh viên.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-title">3. Năng lực còn thiếu (Capability Gaps) & Chiến lược bổ sung (Priority Resourcing)</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 28%;">Capability Gap (Năng lực thiếu)</th>
+          <th style="width: 18%; text-align: center;">Cách bổ sung</th>
+          <th>Vì sao chọn phương án này?</th>
+          <th style="width: 14%; text-align: center;">Thời điểm cần</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Hệ thống đánh giá tự động chất lượng AI (AI Evals Benchmark)</strong></td>
+          <td style="text-align: center;"><span class="badge badge-green">Partner / Consult</span></td>
+          <td>Team hiện tại mạnh về phát triển ứng dụng nhưng chưa có kinh nghiệm sâu về thiết lập bộ metric chuẩn (Faithfulness, Context Recall). Hợp tác với Cố vấn AI giúp chuyển giao tri thức nhanh và tiết kiệm chi phí tuyển dụng.</td>
+          <td style="text-align: center;"><strong>Cần ngay</strong><br><small>(Trong 2 tuần tới)</small></td>
+        </tr>
+        <tr>
+          <td><strong>2. Dữ liệu Job Description chuẩn & Tiêu chí sàng lọc CV thực tế của HR</strong></td>
+          <td style="text-align: center;"><span class="badge badge-blue">Partner</span></td>
+          <td>Nền tảng cần tiêu chí đánh giá CV sát với thực tế tuyển dụng của doanh nghiệp CNTT. Hợp tác với mạng lưới 3–5 đối tác doanh nghiệp tiếp nhận thực tập giúp có dữ liệu chuẩn mà không cần tuyển nhân sự HR full-time.</td>
+          <td style="text-align: center;"><strong>Tuần thứ 4</strong><br><small>(Trước khi mở tính năng CV)</small></td>
+        </tr>
+        <tr>
+          <td><strong>3. Thiết kế UI/UX Portal chuyên nghiệp cho Sinh viên & Giảng viên</strong></td>
+          <td style="text-align: center;"><span class="badge badge-amber">Outsource</span></td>
+          <td>Giao diện hiện tại còn thô sơ. Thuê ngoài một UI/UX Designer hoàn thiện bộ Design System (Figma) trong 10 ngày để tạo độ tin cậy và sự chuyên nghiệp khi demo với Ban Giám hiệu nhà trường.</td>
+          <td style="text-align: center;"><strong>Cần ngay</strong><br><small>(Trong 1 tuần tới)</small></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-title">4. Tuyên ngôn mục tiêu của Squad (Squad Goal)</div>
+    <div class="quote-box" style="font-size: 11px; color: #1e3a8a; line-height: 1.5;">
+      "Team của chúng tôi sở hữu <strong>nền tảng Internova AI Platform</strong> và chịu trách nhiệm đưa <strong>quá trình tra cứu quy định và quản lý thực tập của sinh viên</strong> từ hiện trạng <strong>phân tán, bị động và quá tải thông tin hành chính</strong> đến <strong>trạng thái được tự động hóa 80% bởi trợ lý AI tin cậy, có trích dẫn minh chứng và theo dõi tiến độ thời gian thực trong 90 ngày tới</strong>."
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Track 1 - Day 27: AI Team Lab · Internova AI Platform</div>
+    <div>Trang 3 / 4</div>
+  </div>
+</div>
+
+<!-- ==================== TRANG 4 ==================== -->
+<div class="page">
+  <div>
+    <div class="page-header">
+      <div>
+        <div class="brand">INTERNOVA <span>AI PLATFORM</span></div>
+        <div style="font-size: 10px; color: #64748b;">Đánh giá sức khỏe đội ngũ & Kế hoạch phát triển 30 ngày</div>
+      </div>
+      <div class="page-tag">Trang 4 / 4 · Team Health & Growth Plan</div>
+    </div>
+
+    <div class="section-title">1. Đánh giá sức khỏe đội ngũ (Team Health Assessment)</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 22%;">Khía cạnh đánh giá</th>
+          <th style="width: 14%; text-align: center;">Điểm (1–5)</th>
+          <th>Hiện trạng thực tế & Phân tích nguyên nhân</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Chất lượng AI</strong><br><small>Output & Độ ổn định</small></td>
+          <td style="text-align: center;"><strong style="color: #d97706;">3.5 / 5</strong></td>
+          <td>AI trả lời tốt các câu hỏi đơn văn bản, nhưng độ chính xác suy giảm khi gặp câu hỏi suy luận chéo giữa nhiều văn bản quy định; thiếu hệ thống đo lường tự động độ tin cậy (Groundedness).</td>
+        </tr>
+        <tr>
+          <td><strong>Tiến độ</strong><br><small>Milestones & Cam kết</small></td>
+          <td style="text-align: center;"><strong style="color: #16a34a;">4.0 / 5</strong></td>
+          <td>Các tính năng kỹ thuật MVP hoàn thành đúng hạn; tuy nhiên tiến độ còn bị động do khâu thu thập văn bản quy chế chính thức từ các khoa mất nhiều thời gian hơn dự kiến.</td>
+        </tr>
+        <tr>
+          <td><strong>Tinh thần Team</strong><br><small>Hợp tác & Cởi mở</small></td>
+          <td style="text-align: center;"><strong style="color: #16a34a;">4.5 / 5</strong></td>
+          <td>Team phối hợp cởi mở, thẳng thắn chỉ ra các lỗi hallucination của AI, chia sẻ công việc linh hoạt giữa thành viên AI và Fullstack, tinh thần cam kết cao với mục tiêu pilot.</td>
+        </tr>
+        <tr>
+          <td><strong>Tốc độ ra sản phẩm</strong><br><small>Release Velocity</small></td>
+          <td style="text-align: center;"><strong style="color: #d97706;">3.5 / 5</strong></td>
+          <td>Mất nhiều thời gian vào việc kiểm thử thủ công từng câu trả lời của AI trước mỗi lần release; thiếu pipeline CI/CD kiểm định tự động chất lượng AI khi cập nhật tài liệu mới.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card card-amber" style="margin-bottom: 6px;">
+      <strong style="color: #92400e;">VẤN ĐỀ ƯU TIÊN SỐ 1 CẦN XỬ LÝ NGAY:</strong>
+      <div style="font-size: 10.5px; color: #78350f; margin-top: 1px;">
+        Thiếu hệ thống đánh giá tự động (Automated Evaluation Benchmark) và bộ dữ liệu test chuẩn (Golden Dataset), dẫn đến quy trình kiểm thử tốn thời gian, làm chậm tốc độ release sản phẩm và tiềm ẩn rủi ro trả lời sai khi nạp thêm tài liệu quy chế mới.
+      </div>
+    </div>
+
+    <div class="section-title">2. Nâng cấp năng lực cá nhân (Competency Framework L1 → L2 → L3)</div>
+    <div class="card card-blue" style="margin-bottom: 6px; font-size: 10.5px;">
+      <div style="display: flex; justify-content: space-between;">
+        <div><strong>Vai trò:</strong> AI Engineer (Tạ Thị Nga)</div>
+        <div><strong>Mức hiện tại:</strong> <span class="badge badge-blue">L2 — AI Practitioner</span></div>
+        <div><strong>Mục tiêu 30 ngày:</strong> <span class="badge badge-green">Tiệm cận L3 — AI Builder</span></div>
+      </div>
+      <div style="margin-top: 3px;">
+        <strong>Năng lực cốt lõi cần nâng cấp:</strong> <em>Automated AI Evaluation, Guardrail Engineering & Observability.</em><br>
+        <strong>Hành động thực hành trong 30 ngày:</strong> Xây dựng bộ công cụ tự động đo lường Groundedness & Retrieval Recall bằng framework đánh giá chuyên biệt (với 30 golden cases), tự động chạy sau mỗi lần cập nhật Knowledge Base để đảm bảo chất lượng AI đạt chuẩn trước khi deploy.
+      </div>
+    </div>
+
+    <div class="section-title">3. Kế hoạch hành động phát triển trong 30 ngày (30-Day Growth Plan)</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 5%; text-align: center;">STT</th>
+          <th style="width: 25%;">Vấn đề trọng tâm</th>
+          <th>Hành động cụ thể trong 30 ngày</th>
+          <th style="width: 15%; text-align: center;">Người phụ trách</th>
+          <th style="width: 11%; text-align: center;">Hạn chót</th>
+          <th style="width: 20%;">Dấu hiệu hoàn thành</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">1</td>
+          <td><strong>Chất lượng AI & Thiếu kiểm thử tự động</strong></td>
+          <td>Xây dựng bộ "Golden Dataset" gồm 30 ca kiểm thử thực tế (câu hỏi thông thường, suy luận chéo, câu hỏi bẫy); tích hợp script đo lường tự động chỉ số Groundedness ≥ 90% trước mỗi bản release.</td>
+          <td style="text-align: center;"><strong>Tạ Thị Nga</strong><br><small>AI Engineer</small></td>
+          <td style="text-align: center;">15/09/2026</td>
+          <td>Script chạy tự động xuất báo cáo Groundedness ≥ 90% trên 30 cases; chặn release nếu dưới ngưỡng.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">2</td>
+          <td><strong>Tốc độ ra sản phẩm & Trải nghiệm giao diện</strong></td>
+          <td>Tích hợp giao diện chuẩn hóa cho Student Portal & Lecturer Portal; bổ sung nút phản hồi "Đúng / Chưa chính xác" dưới từng câu trả lời của AI để lưu vết đánh giá vào database.</td>
+          <td style="text-align: center;"><strong>Nguyễn Văn Bình</strong><br><small>Fullstack Dev</small></td>
+          <td style="text-align: center;">20/09/2026</td>
+          <td>Giao diện Next.js hoàn thiện, độ trễ API P95 < 1.5s, dữ liệu phản hồi được ghi nhận vào bảng <code>ai_feedback</code>.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">3</td>
+          <td><strong>Tiến độ triển khai & Cam kết Stakeholder</strong></td>
+          <td>Tổ chức họp báo cáo demo thực tế với TS. Nguyễn Minh Tuấn (Phòng Đào tạo) và ThS. Hoàng Thu Hà; ký biên bản đồng thuận triển khai pilot cho 100 sinh viên Khoa CNTT.</td>
+          <td style="text-align: center;"><strong>Lê Thị Mai</strong><br><small>Product Lead</small></td>
+          <td style="text-align: center;">25/09/2026</td>
+          <td>Biên bản làm việc có chữ ký xác nhận của đại diện Khoa/Phòng Đào tạo đồng ý cho phép triển khai pilot đợt 1.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card card-green" style="margin-top: 4px; font-size: 10px;">
+      <strong>KIỂM TRA TÍNH NHẤT QUÁN LIÊN THÔNG (CONSISTENCY CHECK):</strong><br>
+      • <em>Trang 1 ↔ Trang 2:</em> Stakeholder cần thuyết phục ở Trang 1 (TS. Nguyễn Minh Tuấn) chính là đối tượng nhận Pitch ở Trang 2; Giảng viên ủng hộ (ThS. Hoàng Thu Hà) là đầu mối tư vấn trong RACI.<br>
+      • <em>Trang 3 ↔ Trang 4:</em> Capability Gap 1 (AI Evals) ở Trang 3 được giải quyết trực tiếp qua việc nâng cấp năng lực AI Engineer và Action 1 trong Growth Plan 30 ngày ở Trang 4.<br>
+      • <em>RACI ↔ Growth Plan:</em> Chủ trì các hành động (Tạ Thị Nga, Nguyễn Văn Bình, Lê Thị Mai) hoàn toàn trùng khớp với vai trò Accountable (A) trong ma trận RACI.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Track 1 - Day 27: AI Team Lab · Internova AI Platform</div>
+    <div>Trang 4 / 4</div>
+  </div>
+</div>
+
+</body>
+</html>
