@@ -1,8 +1,12 @@
 # Track 1 - Day 27 — AI Team Lab: Internova AI Platform
 **Đơn vị:** Track 1 - Day 27 AI Team Lab  
 **Tên nhóm:** Team Vươn Lên Chính Mình  
+**Danh sách 3 thành viên:**
+1. **Tạ Thị Nga** (`ngatt-17`) — Trưởng nhóm / AI Engineer & Tech Lead
+2. **Vũ Huy Hoàng** — Fullstack & Backend Developer
+3. **Trần Hoài Nam** — AI Product & Domain Lead  
 **Tên dự án:** Internova AI Platform (Hệ thống AI Quản lý & Tư vấn Thực tập Thông minh)  
-**File bài nộp:** `Day27_AI-Team-Lab_TeamVuonLenChinhMinh.pdf` (Tối đa 4 trang)
+**File bài nộp:** `Day27_AI-Team-Lab_TeamVuonLenChinhMinh.pdf` (Tối đa 4 trang chuẩn A4)
 
 ---
 
@@ -11,7 +15,7 @@
 ## 1. Bối cảnh & Mục tiêu dự án (Gate 0)
 * **Dự án:** Internova AI Platform — Nền tảng hỗ trợ và quản lý quá trình thực tập cho sinh viên, giảng viên và nhà trường bằng AI & RAG.
 * **Mục tiêu 1–3 tháng tới:** Hoàn thiện phiên bản MVP với pipeline RAG trích dẫn chính xác quy chế (Groundedness ≥ 90%), triển khai thử nghiệm Pilot thành công cho 100 sinh viên và 3 giảng viên Khoa CNTT tại trường đại học đối tác.
-* **Trưởng nhóm / Tổng hợp:** Tạ Thị Nga (`ngatt-17` - Tech Lead / AI Engineer).
+* **Đội ngũ thực hiện (3 thành viên):** Tạ Thị Nga (Leader / AI Lead), Vũ Huy Hoàng (Fullstack / Backend Lead), Trần Hoài Nam (Product & Domain Lead).
 
 ---
 
@@ -89,7 +93,7 @@
 
 *Quy tắc chuẩn: Mỗi công việc chỉ có DUY NHẤT một người chịu trách nhiệm cuối cùng (Accountable - A).*
 
-| STT | Công việc trọng tâm | AI Engineer<br>*(Tạ Thị Nga)* | Backend / Fullstack<br>*(Nguyễn Văn Bình)* | Product Lead<br>*(Lê Thị Mai)* | Giảng viên / Đào tạo<br>*(ThS. Hoàng Thu Hà)* |
+| STT | Công việc trọng tâm | AI Engineer<br>*(Tạ Thị Nga)* | Backend / Fullstack<br>*(Vũ Huy Hoàng)* | Product Lead<br>*(Trần Hoài Nam)* | Giảng viên / Đào tạo<br>*(ThS. Hoàng Thu Hà)* |
 |:---:|---|:---:|:---:|:---:|:---:|
 | **1** | **Xác định Use Case, ranh giới an toàn (Guardrails) & kịch bản hội thoại** | C | I | **A** *(Chịu trách nhiệm)* | C *(Tư vấn)* |
 | **2** | **Thu thập, số hóa & chuẩn hóa Knowledge Base quy chế thực tập** | C | I | **A** *(Chịu trách nhiệm)* | C *(Cung cấp)* |
@@ -108,7 +112,7 @@
 ## 1. Lựa chọn AI Team Architecture: Embedded Cross-functional Squad
 * **Mô hình lựa chọn:** **Embedded Squad** (Nhóm đa chức năng tích hợp trực tiếp).
 * **Giải thích lý do lựa chọn:**  
-  Ở giai đoạn hiện tại, dự án Internova đang tập trung toàn lực đưa 01 sản phẩm cốt lõi từ MVP đến Pilot. Quy mô nhóm tinh gọn (3–4 người) đòi hỏi tốc độ lặp (iteration) cao và sự gắn kết chặt chẽ giữa logic nghiệp vụ thực tập, giao diện người dùng và thuật toán AI. Mô hình Embedded giúp kỹ sư AI, kỹ sư backend/frontend và phụ trách sản phẩm cùng thảo luận hàng ngày, loại bỏ độ trễ giao tiếp và sự quan liêu của mô hình Centralized.
+  Ở giai đoạn hiện tại, dự án Internova đang tập trung toàn lực đưa 01 sản phẩm cốt lõi từ MVP đến Pilot. Quy mô nhóm 3 thành viên tinh gọn (Tạ Thị Nga, Vũ Huy Hoàng, Trần Hoài Nam) đòi hỏi tốc độ lặp (iteration) cao và sự gắn kết chặt chẽ giữa logic nghiệp vụ thực tập, giao diện người dùng và thuật toán AI. Mô hình Embedded giúp kỹ sư AI, kỹ sư backend/frontend và phụ trách sản phẩm cùng thảo luận hàng ngày, loại bỏ độ trễ giao tiếp và sự quan liêu của mô hình Centralized.
 
 ---
 
@@ -118,18 +122,18 @@
 ┌──────────────────────────────────────────────────────────────────────────────────┐
 │              INTERNOVA AI TEAM — EMBEDDED CROSS-FUNCTIONAL SQUAD                 │
 ├──────────────────────────────────────┬───────────────────────────────────────────┤
-│    CORE ROLES (Giai đoạn hiện tại)   │     EXTENDED ROLES (Giai đoạn mở rộng)    │
+│    CORE ROLES (3 Thành viên hiện tại)│     EXTENDED ROLES (Giai đoạn mở rộng)    │
 ├──────────────────────────────────────┼───────────────────────────────────────────┤
-│ • AI Engineer / RAG Specialist       │ • MLOps & Continuous Evaluation Engineer  │
-│ • Fullstack / Backend Engineer       │ • Data Privacy & Compliance Specialist    │
-│ • AI Product & Domain Lead           │ • University & Industry Partnership Lead  │
+│ • AI Engineer / RAG: Tạ Thị Nga      │ • MLOps & Continuous Evaluation Engineer  │
+│ • Fullstack / Backend: Vũ Huy Hoàng  │ • Data Privacy & Compliance Specialist    │
+│ • AI Product & Domain: Trần Hoài Nam │ • University & Industry Partnership Lead  │
 └──────────────────────────────────────┴───────────────────────────────────────────┘
 ```
 
-* **Core Roles (Cần ngay):**
-  1. **AI Engineer / RAG Specialist:** Làm chủ RAG architecture, semantic routing, vector index, prompt engineering, guardrails và AI observability.
-  2. **Fullstack / Backend Engineer:** Xây dựng backend FastAPI, cơ sở dữ liệu PostgreSQL, Next.js frontend và các nghiệp vụ quản lý tiến độ, tích hợp API an toàn.
-  3. **AI Product & Domain Lead:** Hiểu sâu quy trình thực tập đại học, kiểm định chất lượng nội dung Knowledge Base, thiết kế trải nghiệm người dùng và tiếp nhận phản hồi từ nhà trường.
+* **Core Roles (3 Thành viên hiện tại):**
+  1. **Tạ Thị Nga — AI Engineer / RAG Specialist:** Làm chủ RAG architecture, semantic routing, vector index, prompt engineering, guardrails và AI observability.
+  2. **Vũ Huy Hoàng — Fullstack / Backend Engineer:** Xây dựng backend FastAPI, cơ sở dữ liệu PostgreSQL, Next.js frontend và các nghiệp vụ quản lý tiến độ, tích hợp API an toàn.
+  3. **Trần Hoài Nam — AI Product & Domain Lead:** Hiểu sâu quy trình thực tập đại học, kiểm định chất lượng nội dung Knowledge Base, thiết kế trải nghiệm người dùng và tiếp nhận phản hồi từ nhà trường.
 * **Extended Roles (Bổ sung khi scale sang 5–10 trường đại học):**
   1. **MLOps & Continuous Evaluation Engineer:** Tự động hóa pipeline đánh giá chất lượng mô hình, quản lý latency, caching và chi phí token khi lượng truy vấn tăng cao.
   2. **Data Privacy & Compliance Specialist:** Rà soát tuân thủ Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân trong môi trường giáo dục.
@@ -161,7 +165,7 @@
 |---|:---:|---|
 | **Chất lượng AI** *(Output & Stability)* | **3.5 / 5** | AI trả lời rất tốt các câu hỏi đơn văn bản, nhưng độ chính xác giảm khi gặp câu hỏi suy luận chéo giữa nhiều văn bản quy định; chưa có bộ metric đo lường tự động độ tin cậy (Groundedness). |
 | **Tiến độ** *(Milestones & Delivery)* | **4.0 / 5** | Các tính năng kỹ thuật cốt lõi hoàn thành đúng hạn; tuy nhiên tiến độ còn bị động do khâu thu thập văn bản quy chế chính thức từ các khoa mất nhiều thời gian hơn dự kiến. |
-| **Tinh thần Team** *(Morale & Psychological Safety)* | **4.5 / 5** | Team phối hợp cởi mở, thẳng thắn phản biện các lỗi hallucination của AI, chia sẻ công việc linh hoạt giữa thành viên AI và Fullstack, tinh thần cam kết cao với mục tiêu pilot. |
+| **Tinh thần Team** *(Morale & Psychological Safety)* | **4.5 / 5** | Cả 3 thành viên (Nga, Hoàng, Nam) phối hợp cởi mở, thẳng thắn phản biện các lỗi hallucination của AI, chia sẻ công việc linh hoạt, tinh thần cam kết cao với mục tiêu pilot. |
 | **Tốc độ ra sản phẩm** *(Release Velocity)* | **3.5 / 5** | Mất nhiều thời gian vào việc kiểm thử thủ công từng câu trả lời của AI trước mỗi lần release; thiếu pipeline CI/CD kiểm định tự động chất lượng AI khi cập nhật tài liệu mới. |
 
 * **Vấn đề ưu tiên số 1 cần giải quyết:**  
@@ -169,7 +173,7 @@
 
 ---
 
-## 2. Nâng cấp năng lực (Competency Framework L1 → L2 → L3)
+## 2. Nâng cấp năng lực cá nhân (Competency Framework L1 → L2 → L3)
 * **Vai trò được chọn:** **AI Engineer** *(Tạ Thị Nga)*
 * **Cấp độ hiện tại:** **L2 — AI Practitioner** (Đã thành thạo triển khai pipeline RAG, tích hợp Semantic Routing, gọi LLM APIs và thiết lập Guardrails cơ bản).
 * **Năng lực cốt lõi cần nâng cấp tiếp theo:** **Automated AI Evals & Observability Engineering** *(Tiệm cận L3 — AI Builder)*.
@@ -182,12 +186,12 @@
 | STT | Vấn đề trọng tâm | Hành động cụ thể trong 30 ngày | Người phụ trách *(Owner)* | Hạn chót *(Deadline)* | Dấu hiệu hoàn thành cụ thể *(Measurable Deliverable)* |
 |:---:|---|---|:---:|:---:|---|
 | **1** | **Chất lượng AI & Thiếu hệ thống kiểm thử tự động** | Xây dựng bộ "Golden Dataset" gồm 30 ca kiểm thử thực tế (gồm câu hỏi thông thường, câu hỏi suy luận chéo và câu hỏi bẫy); tích hợp script đo lường tự động chỉ số Groundedness ≥ 90% trước mỗi bản release. | **Tạ Thị Nga**<br>*(AI Engineer)* | **15/09/2026** | File `eval_benchmark.py` chạy thành công, tự động xuất báo cáo Groundedness Score ≥ 90% trên 30 test cases và chặn release nếu điểm dưới ngưỡng. |
-| **2** | **Tốc độ ra sản phẩm & Trải nghiệm giao diện** | Tích hợp giao diện chuẩn hóa cho Student Portal và Lecturer Portal; bổ sung nút phản hồi "Đúng / Chưa chính xác" ngay dưới từng câu trả lời của AI để lưu vết đánh giá của người dùng vào cơ sở dữ liệu. | **Nguyễn Văn Bình**<br>*(Fullstack Dev)* | **20/09/2026** | Giao diện Next.js hoàn thiện 100%, thời gian phản hồi API P95 < 1.5 giây, dữ liệu đánh giá của người dùng được lưu thành công vào bảng `ai_feedback` trong PostgreSQL. |
-| **3** | **Tiến độ triển khai & Cam kết của Stakeholder** | Tổ chức buổi họp báo cáo demo thực tế với TS. Nguyễn Minh Tuấn (Phòng Đào tạo) và ThS. Hoàng Thu Hà; ký biên bản đồng thuận triển khai pilot cho 100 sinh viên Khoa CNTT. | **Lê Thị Mai**<br>*(Product Lead)* | **25/09/2026** | Biên bản làm việc có chữ ký xác nhận của đại diện Khoa/Phòng Đào tạo đồng ý cho phép triển khai pilot đợt 1 từ ngày 01/10/2026. |
+| **2** | **Tốc độ ra sản phẩm & Trải nghiệm giao diện** | Tích hợp giao diện chuẩn hóa cho Student Portal và Lecturer Portal; bổ sung nút phản hồi "Đúng / Chưa chính xác" ngay dưới từng câu trả lời của AI để lưu vết đánh giá của người dùng vào cơ sở dữ liệu. | **Vũ Huy Hoàng**<br>*(Fullstack Dev)* | **20/09/2026** | Giao diện Next.js hoàn thiện 100%, thời gian phản hồi API P95 < 1.5 giây, dữ liệu đánh giá của người dùng được lưu thành công vào bảng `ai_feedback` trong PostgreSQL. |
+| **3** | **Tiến độ triển khai & Cam kết của Stakeholder** | Tổ chức buổi họp báo cáo demo thực tế với TS. Nguyễn Minh Tuấn (Phòng Đào tạo) và ThS. Hoàng Thu Hà; ký biên bản đồng thuận triển khai pilot cho 100 sinh viên Khoa CNTT. | **Trần Hoài Nam**<br>*(Product Lead)* | **25/09/2026** | Biên bản làm việc có chữ ký xác nhận của đại diện Khoa/Phòng Đào tạo đồng ý cho phép triển khai pilot đợt 1 từ ngày 01/10/2026. |
 
 ---
 
 ## 4. Kiểm tra tính nhất quán liên thông (Cross-Artefact Consistency Check)
 *  **Trang 1 ↔ Trang 2:** Stakeholder trọng tâm cần thuyết phục ở Trang 1 (TS. Nguyễn Minh Tuấn) chính là đối tượng mục tiêu nhận bản Pitch "Conclusion First" ở Trang 2, đồng thời giảng viên ủng hộ (ThS. Hoàng Thu Hà) xuất hiện với vai trò Consulted/Phối hợp trong RACI.
 *  **Trang 3 ↔ Trang 4:** Năng lực còn thiếu (Capability Gap 1: AI Evals) ở Trang 3 được giải quyết trực tiếp thông qua hành động nâng cấp năng lực AI Engineer và Action 1 trong Growth Plan 30 ngày ở Trang 4.
-*  **RACI ↔ Growth Plan:** Người phụ trách (Owner) trong Growth Plan 30 ngày (Tạ Thị Nga, Nguyễn Văn Bình, Lê Thị Mai) hoàn toàn trùng khớp với vai trò Accountable (A) cho từng mảng công việc tương ứng trong ma trận RACI.
+*  **RACI ↔ Growth Plan:** Người phụ trách (Owner) trong Growth Plan 30 ngày (Tạ Thị Nga, Vũ Huy Hoàng, Trần Hoài Nam) hoàn toàn trùng khớp với vai trò Accountable (A) cho từng mảng công việc tương ứng trong ma trận RACI.

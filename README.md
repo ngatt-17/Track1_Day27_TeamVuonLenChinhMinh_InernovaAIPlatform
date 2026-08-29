@@ -1,10 +1,10 @@
 # Track 1 - Day 27 — AI Team Lab
 
 - **Team:** Team Vươn Lên Chính Mình
-- **Thành viên (3–5 người):**
+- **Thành viên (3 thành viên):**
   1. **Tạ Thị Nga** (`ngatt-17`) — Trưởng nhóm / AI Engineer & Tech Lead
-  2. **Nguyễn Văn Bình** — Fullstack & Backend Developer
-  3. **Lê Thị Mai** — AI Product & Domain Lead
+  2. **Vũ Huy Hoàng** — Fullstack & Backend Developer
+  3. **Trần Hoài Nam** — AI Product & Domain Lead
 - **Tên dự án:** Internova AI Platform (Nền tảng Quản lý & Hỗ trợ Thực tập Toàn diện bằng AI)
 - **Link sản phẩm/demo (nếu có):** [Internova AI Platform - Tổng quan dự án](Tongquan.md)
 
