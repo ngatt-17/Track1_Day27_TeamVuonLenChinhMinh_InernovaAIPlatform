@@ -1,0 +1,488 @@
+0. Đọc trước khi làm (3 phút)
+Trước khi bắt đầu
+
+Trong 2 giờ, mỗi team áp dụng trực tiếp nội dung bài giảng lên dự án đang build: lập Stakeholder Map, viết Pitch & RACI, thiết kế AI Team và hoàn thành Team Health & Growth Plan 30 ngày.
+
+Cơ bản
+Thời lượng dự kiến
+120 phút
+Môi trường cần có
+macOS, Linux, Windows · Google Docs / Google Slides / FigJam / Miro hoặc công cụ cộng tác tương đương, Deck bài giảng của buổi học để tra cứu khái niệm, Một nơi chung để team tổng hợp artefact (sản phẩm đầu ra) cuối cùng
+Cần biết trước
+Đã tham gia bài giảng về Stakeholder, Pitch, RACI, AI Team Architecture, Team Health và Competency · Có một dự án AI mà team đang build · Biết thành viên hiện tại của team và các stakeholder chính đang liên quan đến dự án
+Xong bài này, bạn sẽ
+Xây dựng Stakeholder Map cho chính dự án và xác định chiến lược làm việc với các stakeholder quan trọng · Viết Pitch theo cấu trúc Kết luận trước và hoàn thành RACI Matrix với trách nhiệm rõ ràng · Thiết kế cấu trúc AI Team phù hợp với giai đoạn hiện tại, xác định Core Roles (vai trò cốt lõi) và Priority Resourcing (cách bổ sung năng lực) · Đánh giá Team Health và xây Team Health & Growth Plan trong 30 ngày
+Bài này làm gì?
+Team sẽ đi qua một chuỗi quyết định liên tục:
+
+Ai ảnh hưởng đến dự án? → Cần thuyết phục và phân quyền thế nào? → Team cần cấu trúc & vai trò gì? → Trong 30 ngày tới cần cải thiện điều gì?
+
+Cuối Lab, team không cần tạo một dự án mới. Toàn bộ bài làm phải dựa trên chính dự án AI mà team đang xây dựng.
+
+Từ ngữ sẽ gặp liên tục (đọc một lần là đủ):
+Từ	Nghĩa đơn giản
+Stakeholder (bên liên quan)	Người hoặc nhóm có thể ảnh hưởng đến dự án hoặc bị ảnh hưởng bởi kết quả của dự án
+Stakeholder Map (bản đồ stakeholder)	Bản đồ giúp team nhìn stakeholder theo 2 trục: Influence (mức độ ảnh hưởng) và Interest (mức độ quan tâm)
+Stance (mức độ ủng hộ)	Thái độ hiện tại của stakeholder với dự án: Ủng hộ / Trung lập / Chưa ủng hộ hoặc phản đối
+Champion (người ủng hộ chủ chốt)	Trong slide, nhãn dùng cho stakeholder có ảnh hưởng cao, quan tâm cao và đang tích cực hỗ trợ dự án
+Blocker (người cần ưu tiên thuyết phục)	Trong slide, nhãn dùng cho stakeholder có ảnh hưởng cao nhưng chưa đủ quan tâm hoặc chưa bị thuyết phục
+Supporter (người ủng hộ)	Stakeholder quan tâm đến dự án và có thể cung cấp feedback, giới thiệu hoặc lan tỏa
+Bystander (người ít liên quan)	Stakeholder hiện có ảnh hưởng và mức quan tâm thấp; chủ yếu cần theo dõi
+Conclusion First (kết luận trước)	Nói đề xuất quan trọng nhất trước, sau đó mới đưa lý do và bằng chứng
+RACI	R — Responsible (người thực hiện), A — Accountable (người chịu trách nhiệm cuối), C — Consulted (người cần được hỏi ý kiến), I — Informed (người cần được thông báo)
+AI Team Architecture (cấu trúc AI Team)	Cách tổ chức con người và năng lực AI trong team: Centralized, Embedded hoặc Hybrid
+Core Role (vai trò cốt lõi)	Vai trò team cần ngay ở giai đoạn hiện tại
+Capability gap (năng lực còn thiếu)	Năng lực team chưa có hoặc chưa đủ mạnh để đạt milestone tiếp theo
+Priority Resourcing (cách bổ sung năng lực)	Quyết định bổ sung capability gap bằng Hire (tuyển), Outsource (thuê ngoài) hoặc Partner (hợp tác)
+Team Health (sức khỏe team)	Trạng thái vận hành hiện tại của team: chất lượng AI, tiến độ, tinh thần team và tốc độ ra sản phẩm
+Competency Framework (khung năng lực)	Khung L1/L2/L3 trong slide giúp team nhìn mức năng lực hiện tại và hướng phát triển tiếp theo
+Growth Plan (kế hoạch phát triển)	Kế hoạch cải thiện có action (hành động), owner (người phụ trách) và deadline (hạn hoàn thành)
+Làm ở đâu?
+Team có thể làm trên Google Slides, Google Docs, FigJam, Miro hoặc công cụ cộng tác tương đương.
+Bài nộp cuối: 01 file PDF/Slides tối đa 4 trang, gồm đủ 4 artefact (sản phẩm đầu ra) của Lab (xem mục 10).
+
+Cứ 1 phase xong là có 1 "gate" (cổng kiểm tra) — ô kiểm tra nhỏ để team tự đối chiếu. Qua gate thì đi tiếp; chưa qua thì sửa ngay trước khi sang Phase tiếp theo.
+1. Đề bài và cách làm
+Một sản phẩm AI không chỉ cần model hoặc demo chạy được. Team còn phải trả lời được:
+
+Ai có quyền ảnh hưởng đến dự án, ai chịu trách nhiệm cho từng quyết định, team cần những năng lực nào, và team đang vận hành khỏe hay yếu ở đâu?
+
+Lab đi theo chuỗi:
+
+Stakeholder Map
+→ Pitch & RACI
+→ AI Team Design
+→ Team Health & Growth Plan
+→ Tự kiểm tra & Nộp bài
+Phase	Thời gian	Hình thức	Câu hỏi trung tâm	Đầu ra
+0. Chốt phạm vi	5 phút	Team	Team đang áp dụng Lab cho dự án nào và ai là người tổng hợp?	Scope (phạm vi) + owner (người phụ trách)
+1. Stakeholder Map	20 phút	Cá nhân → Team	Ai ảnh hưởng đến dự án và team cần làm gì với họ?	Stakeholder Map + 4 chiến lược cụ thể
+2. Pitch & RACI	30 phút	Team → Cá nhân → Team	Nói gì với stakeholder và ai chịu trách nhiệm cho từng việc?	Pitch + phản biện + RACI Matrix
+3. AI Team Design	25 phút	Team	Team cần cấu trúc và năng lực gì ở giai đoạn hiện tại?	AI Team Architecture + Priority Resourcing (cách bổ sung năng lực)
+4. Team Health & Growth	25 phút	Cá nhân → Team	Team đang yếu ở đâu và 30 ngày tới cần cải thiện gì?	Team Health & Growth Plan
+5. Tự soi lỗi & nộp	15 phút	Team · Trưởng nhóm phụ trách repo	4 artefact (sản phẩm đầu ra) đã nhất quán và đủ bằng chứng chưa?	GitHub repo hoàn chỉnh
+Cách đọc hình thức làm bài
+Quy mô team: mỗi team gồm 3–5 thành viên. Nếu lớp đã có team dự án cố định khác quy mô này, giữ nguyên team hiện tại và báo giảng viên trước khi bắt đầu Lab.
+
+Cá nhân: mỗi thành viên tự làm phần của mình trước, chưa thảo luận để tránh bị ảnh hưởng bởi ý kiến người khác.
+Team: cả nhóm cùng thảo luận và chốt một kết quả chung để đưa vào bài nộp.
+Cá nhân → Team: làm riêng trước, sau đó mang kết quả vào team để so sánh và thống nhất.
+Team → Cá nhân → Team: team tạo bản nháp chung, mỗi người tự kiểm tra/viết lại, sau đó team chốt bản cuối.
+Luật của bài lab
+Dùng chính dự án hiện tại của team. Không tạo case giả chỉ để làm Lab.
+Stakeholder Map bắt đầu từ Influence (mức độ ảnh hưởng) × Interest (mức độ quan tâm). Các nhãn Champion / Blocker / Supporter / Bystander trong slide được dùng để giúp team dễ gọi tên từng nhóm, nhưng vẫn cần kiểm tra stance (mức độ ủng hộ) thực tế của từng stakeholder.
+Pitch dùng Conclusion First (kết luận trước) nhưng không được hứa vượt quá bằng chứng hiện có.
+RACI phải có 1 Accountable (người chịu trách nhiệm cuối) cho mỗi công việc. Theo rule-of-thumb trong slide, nên tách R và A khi team đủ người để tránh tự làm–tự duyệt; với team rất nhỏ, một người có thể đồng thời là R và A.
+Không thiết kế team theo kiểu "càng nhiều chức danh càng tốt". Chỉ chọn role (vai trò) / capability (năng lực) thực sự cần.
+Priority Resourcing (cách bổ sung năng lực) phải giải thích vì sao chọn Hire (tuyển) / Outsource (thuê ngoài) / Partner (hợp tác).
+Growth Plan phải có action (hành động) + owner (người phụ trách) + deadline (hạn hoàn thành).
+2. Đầu vào và tài nguyên
+Dự án AI hiện tại của team.
+Danh sách thành viên team và vai trò đang đảm nhiệm.
+Danh sách stakeholder đang liên quan hoặc có khả năng ảnh hưởng đến dự án.
+Deck bài giảng để tra cứu Stakeholder, RACI, AI Team Architecture, Competency và Team Health.
+Công cụ cộng tác: Google Docs / Google Slides / FigJam / Miro hoặc tương đương.
+3. Phase 0 — Chốt phạm vi & cách làm · 5 phút · Team
+Làm — team thống nhất 4 thông tin:
+
+Thành viên team: xác nhận team có 3–5 thành viên và ghi đầy đủ họ tên.
+Tên dự án: team đang áp dụng Lab cho sản phẩm nào?
+Mục tiêu hiện tại: trong 1–3 tháng tới team đang cố đạt điều gì?
+Trưởng nhóm / người tổng hợp: trưởng nhóm chịu trách nhiệm tạo repository và đảm bảo artefact (sản phẩm đầu ra) chung được cập nhật đầy đủ?
+Format làm bài: Slides / Docs / FigJam / Miro?
+Ghi lại ở đâu: README.md của repository. Trưởng nhóm tạo repo theo format ở Mục 10 ngay từ đầu Lab và dùng repo này xuyên suốt cho đến khi nộp bài.
+
+Tự kiểm
+·
+GATE 0 — Scope đã rõ
+Bạn qua gate khi cả team đang nói về cùng một dự án, cùng một mục tiêu hiện tại và có một người tổng hợp bài.
+4. Phase 1 — Stakeholder Map & chiến lược · 20 phút · Cá nhân → Team
+Kiến thức cần dùng
+
+Stakeholder Map gồm 2 trục:
+Influence (mức độ ảnh hưởng): stakeholder có khả năng tác động đến kết quả dự án đến mức nào?
+Interest (mức độ quan tâm): stakeholder quan tâm đến dự án đến mức nào?
+Trong slide, 4 vùng được gọi bằng các nhãn Champion / Blocker / Supporter / Bystander để dễ nhớ.
+Khi làm Lab, sau khi đặt stakeholder theo Influence × Interest, team kiểm tra thêm stance (mức độ ủng hộ):
+Ủng hộ
+Trung lập
+Chưa ủng hộ / phản đối
+Cách làm này giúp team dùng đúng thuật ngữ của slide nhưng không mặc định rằng mọi stakeholder nằm cùng một vùng đều có thái độ giống nhau.
+1. Cá nhân — Liệt kê stakeholder (5')
+Làm — mỗi thành viên tự liệt kê ít nhất 6 stakeholder cụ thể.
+
+Ví dụ:
+
+Giảng viên/mentor đang review dự án
+Người dùng thử cụ thể
+Khách hàng tiềm năng
+Người có quyền duyệt pilot
+Đối tác dữ liệu
+Nhà đầu tư/đơn vị tài trợ
+Founder / Tech Lead / Product Lead trong team
+Không viết quá chung chung như chỉ ghi khách hàng, nhà đầu tư, người dùng.
+2. Team — Thống nhất Stakeholder Map (7')
+Làm — gộp danh sách, loại trùng và đặt từng stakeholder lên ma trận:
+
+Interest thấp	Interest cao
+Influence cao	Blocker / người cần ưu tiên thuyết phục — giữ hài lòng, xử lý mối lo	Champion / người ủng hộ chủ chốt — làm việc chặt chẽ, tận dụng sự ủng hộ
+Influence thấp	Bystander / người ít liên quan — theo dõi	Supporter / người ủng hộ — giữ thông tin, khai thác feedback
+Sau đó đánh dấu thêm stance (mức độ ủng hộ) thực tế của từng stakeholder:
+
+Ủng hộ / Trung lập / Chưa ủng hộ
+
+Nếu stance thực tế không giống nhãn gợi ý của quadrant, ưu tiên ghi nhận thực tế và giải thích ngắn lý do.
+3. Team — Chọn 4 stakeholder ưu tiên & chiến lược (8')
+Chọn:
+
+2 stakeholder đang ủng hộ mạnh để tận dụng sức ảnh hưởng.
+2 stakeholder chưa ủng hộ / có rủi ro cản trở để ưu tiên thuyết phục.
+Với mỗi người/nhóm, trả lời:
+
+Họ quan tâm điều gì?
+Họ có thể giúp hoặc cản trở dự án thế nào?
+Hành động cụ thể của team trong 1–2 tuần tới là gì?
+Mục tiêu
+·
+Ví dụ chiến lược đủ cụ thể
+"Mentor đang ủng hộ dự án → gửi demo mới trước thứ Sáu và nhờ giới thiệu 1 trường có thể pilot."
+
+Không viết: "Giữ liên hệ tốt với mentor."
+
+Ghi lại ở đâu: Trang 1 — Stakeholder Map & Strategy.
+Tự kiểm
+·
+GATE 1 — Stakeholder Map có thể hành động
+Bạn qua gate khi: có ít nhất 6 stakeholder cụ thể, đã map theo Influence × Interest, có stance (mức độ ủng hộ) rõ ràng và có 4 hành động cụ thể cho 4 stakeholder ưu tiên.
+5. Phase 2 — Pitch "Kết luận trước" & RACI Matrix · 30 phút · Team → Cá nhân → Team
+Kiến thức cần dùng
+
+Pitch ngắn theo cấu trúc:
+Kết luận / Đề xuất
+→ 2–3 lý do chính
+→ Bằng chứng / số liệu / demo
+→ Small ask (đề nghị hành động nhỏ, cụ thể) tiếp theo
+Copy
+RACI:
+R — Responsible: người trực tiếp làm
+A — Accountable: người chịu trách nhiệm cuối cùng
+C — Consulted: cần hỏi ý kiến trước quyết định
+I — Informed: cần được thông báo
+Lưu ý
+·
+RACI — ưu tiên rõ trách nhiệm hơn là máy móc tách vai
+Rule-of-thumb trong slide là nên tách Responsible (người thực hiện) và Accountable (người chịu trách nhiệm cuối) khi team đủ người. Với team rất nhỏ, một người vẫn có thể vừa R vừa A. Điều bắt buộc trong Lab: mỗi công việc chỉ có 1 A rõ ràng.
+
+1. Team — Chọn stakeholder & viết Pitch nháp (10')
+Chọn 1 stakeholder quan trọng trong Phase 1.
+
+Viết pitch tối đa nửa trang:
+
+Kết luận: Team đề xuất / mong muốn gì?
+Lý do: Vì sao stakeholder này nên quan tâm?
+Bằng chứng: Demo, dữ liệu, feedback hoặc kết quả nào đang hỗ trợ kết luận?
+Small ask (đề nghị hành động nhỏ, cụ thể): Hành động nhỏ tiếp theo team muốn stakeholder đồng ý là gì?
+2. Team — Chuẩn bị phản biện (5')
+Viết 1 phản biện có khả năng xảy ra nhất.
+
+Ví dụ:
+
+"AI chưa đủ đáng tin."
+"Rủi ro quá cao."
+"Chi phí chưa hợp lý."
+"Chưa thấy bằng chứng người dùng cần."
+"Chưa sẵn sàng triển khai."
+Sau đó viết câu trả lời dựa trên bằng chứng hoặc hành động giảm rủi ro, không chỉ dựa trên ý kiến.
+3. Cá nhân — Viết lại Pitch theo cách của bạn (5')
+Mỗi thành viên tự viết lại pitch ngắn theo cùng cấu trúc:
+
+Conclusion First (kết luận trước)
+→ Lý do
+→ Evidence (bằng chứng)
+→ Small ask (đề nghị hành động nhỏ)
+Copy
+Mục tiêu của bước cá nhân là kiểm tra xem mỗi người có thật sự hiểu thông điệp hay chỉ đang đồng ý với bản nháp của team.
+
+Sau 5 phút, mỗi người chia sẻ nhanh phiên bản của mình. Team chọn những câu rõ nhất để đưa vào bản cuối.4. Team — Xây RACI Matrix (10')
+Chọn 4–6 công việc quan trọng của dự án trong 1–2 tháng tới.
+
+Ví dụ:
+
+Công việc	Founder/PM	AI Engineer	Member khác	Stakeholder
+Xác định use case				
+Xây MVP				
+Chuẩn bị dữ liệu				
+Kiểm thử				
+Demo/Pilot				
+Quyết định release				
+Điền R / A / C / I.
+Quy tắc: mỗi hàng phải có 1 A rõ ràng.
+
+Ghi lại ở đâu: Trang 2 — Pitch & RACI.
+
+Tự kiểm
+·
+GATE 2 — Pitch rõ, RACI không mơ hồ
+Bạn qua gate khi: Pitch có kết luận trước + bằng chứng + small ask (đề nghị hành động nhỏ, cụ thể), có 1 phản biện và cách xử lý, RACI có 4–6 việc quan trọng và mỗi việc có 1 Accountable rõ ràng.
+6. Phase 3 — Thiết kế AI Team · 25 phút · Team
+Kiến thức cần dùng
+
+Ba dạng AI Team Architecture:
+
+Mô hình	Bản chất
+Centralized	Một nhóm AI trung tâm phục vụ nhiều sản phẩm/team
+Embedded	Năng lực AI nằm trực tiếp trong team sản phẩm
+Hybrid	Có hub AI chung nhưng vẫn có người AI nhúng vào từng team/sản phẩm
+Với startup/team nhỏ, không cần sao chép cơ cấu của công ty lớn. Câu hỏi chính là:
+
+Ở giai đoạn hiện tại, team cần năng lực nào để đưa sản phẩm đi tiếp?
+1. Team — Chọn Team Architecture (5')
+Chọn:
+
+Centralized
+Embedded
+Hybrid
+Viết 1–2 câu giải thích vì sao phù hợp với quy mô và giai đoạn hiện tại.
+
+2. Team — Xác định Core Roles (vai trò cốt lõi) & capability gap (năng lực còn thiếu) (8')
+Liệt kê:
+
+Core — cần ngay
+
+Ví dụ:
+
+AI Product / Founder
+AI Engineer
+Data / Backend
+Fullstack
+UX
+Domain Expert
+Extended — có thể cần khi scale
+
+Ví dụ:
+
+Forward Deployed Engineer
+MLOps / Evals
+Legal / Compliance
+AI Ethics / Governance
+Specialist theo domain
+Không bắt buộc team phải có đủ tất cả các vai trò.
+3. Team — Priority Resourcing (cách bổ sung năng lực) (7')
+Chọn 1–3 capability gap (năng lực còn thiếu) quan trọng nhất.
+
+Với từng gap, chọn một phương án:
+
+Hire: tuyển người vào team
+Outsource: thuê ngoài một phần
+Partner: hợp tác với đối tác có sẵn năng lực
+Ghi rõ:
+
+Capability gap (năng lực còn thiếu) → Cách bổ sung → Vì sao → Khi nào cần
+Copy
+Ví dụ:
+
+Domain expertise y tế
+→ Partner với bác sĩ/đơn vị y tế
+→ Team không cần tuyển full-time ở giai đoạn MVP
+→ Cần trước pilot đầu tiên
+4. Team — Chốt Squad Goal (5')
+Viết một câu:
+
+"Team/Squad của chúng tôi sở hữu ________ và chịu trách nhiệm đưa ________ từ hiện trạng đến ________."
+
+Ghi lại ở đâu: Trang 3 — AI Team Design.
+
+Tự kiểm
+·
+GATE 3 — Team Design phù hợp thực tế
+Bạn qua gate khi: có 1 architecture được giải thích, có Core Roles, xác định capability gap (năng lực còn thiếu) và Priority Resourcing (cách bổ sung năng lực) bằng Hire / Outsource / Partner thay vì chỉ liệt kê chức danh.
+7. Phase 4 — Team Health & Growth Plan · 25 phút · Cá nhân → Team
+Kiến thức cần dùng
+
+Team tự đánh giá theo 4 khía cạnh:
+
+Chất lượng AI — output có đủ tốt và ổn định không?
+Tiến độ — team có hoàn thành việc đúng cam kết không?
+Tinh thần team — mọi người có dám nói vấn đề và phối hợp tốt không?
+Tốc độ ra sản phẩm — mất bao lâu để biến một thay đổi thành thứ người dùng có thể thử?
+Competency Framework (khung năng lực) trong slide gồm L1 — AI Literate, L2 — AI Practitioner và L3 — AI Builder. Trong Lab, team dùng khung này để xác định mức hiện tại và năng lực cần nâng tiếp theo; không cần mất thời gian tranh luận chính xác về số tháng kinh nghiệm.
+1. Cá nhân — Tự chấm Team Health (5')
+Mỗi người cho điểm từ 1–5:
+
+Khía cạnh	Điểm 1–5
+Chất lượng AI	
+Tiến độ	
+Tinh thần team	
+Tốc độ ra sản phẩm	
+2. Team — So sánh điểm & chọn vấn đề (7')
+So sánh điểm giữa các thành viên.
+
+Trả lời:
+
+Khía cạnh nào thấp nhất?
+Điểm số nào chênh lệch nhiều nhất giữa các thành viên?
+Vì sao có sự chênh lệch đó?
+Một vấn đề nào nếu không xử lý sẽ ảnh hưởng trực tiếp đến milestone tiếp theo?
+3. Team — Chọn Competency (năng lực) cần nâng cấp (5')
+Dùng Competency Framework trong slide:
+
+L1 — AI Literate
+L2 — AI Practitioner
+L3 — AI Builder
+Chọn:
+
+1 role (vai trò) cụ thể
+level (cấp độ) hiện tại hoặc gần nhất
+1 competency (năng lực) cần nâng tiếp theo
+1 action (hành động) thực hành trong 30 ngày
+Ví dụ:
+
+AI Engineer
+→ hiện gần L2 — AI Practitioner
+→ cần nâng Evals / quality evaluation
+→ trong 30 ngày xây bộ 30 golden cases và chạy eval mỗi lần release
+Copy
+4. Team — Growth Plan 30 ngày (8')
+Chọn tối đa 3 hành động.
+
+Vấn đề	Hành động 30 ngày	Owner (người phụ trách)	Deadline (hạn hoàn thành)	Dấu hiệu hoàn thành
+Lưu ý
+·
+Growth Plan không phải danh sách mong muốn
+Không viết "team cần giao tiếp tốt hơn".
+Hãy viết hành động có thể kiểm tra, ví dụ: "Mỗi thứ Sáu review 20 phút, PM làm owner (người phụ trách), bắt đầu từ tuần này."
+
+Ghi lại ở đâu: Trang 4 — Team Health & Growth Plan.
+
+Tự kiểm
+·
+GATE 4 — Growth Plan có thể thực thi
+Bạn qua gate khi: team đã chấm đủ 4 khía cạnh, chọn vấn đề ưu tiên, xác định 1 năng lực cần nâng và có tối đa 3 hành động với owner (người phụ trách) + deadline (hạn hoàn thành) + dấu hiệu hoàn thành.
+8. Phase 5 — Tự soi lỗi & hoàn thiện · 15 phút · Team · Trưởng nhóm phụ trách repo
+Làm — Team: cả team mở 4 trang artefact (sản phẩm đầu ra) và kiểm tra:
+
+Stakeholder
+ Có ít nhất 6 stakeholder cụ thể?
+ Đã map theo Influence × Interest?
+ Đã dùng đúng cách các nhãn Champion / Blocker / Supporter / Bystander trong slide và vẫn xác định vị trí stakeholder theo Influence × Interest?
+ 4 stakeholder ưu tiên đều có hành động cụ thể?
+Pitch & RACI
+ Pitch nói kết luận trước?
+ Có bằng chứng hỗ trợ kết luận?
+ Có small ask (đề nghị hành động nhỏ, cụ thể) rõ ràng?
+ Có 1 phản biện và cách xử lý?
+ Mỗi công việc trong RACI có 1 Accountable rõ ràng?
+AI Team
+ Architecture có lý do?
+ Core Roles phù hợp với giai đoạn hiện tại?
+ Có capability gap (năng lực còn thiếu)?
+ Priority Resourcing (cách bổ sung năng lực) nói rõ Hire / Outsource / Partner và lý do?
+Team Health
+ Đủ 4 khía cạnh Team Health?
+ Có vấn đề ưu tiên?
+ Có năng lực cần nâng?
+ Mỗi action (hành động) trong 30-day plan có owner (người phụ trách) + deadline (hạn hoàn thành) + dấu hiệu hoàn thành?
+Kiểm tra consistency (tính nhất quán) giữa 4 trang
+ Stakeholder quan trọng ở Trang 1 có xuất hiện hợp lý trong Pitch/RACI?
+ Capability gap (năng lực còn thiếu) ở Trang 3 có liên quan đến vấn đề Team Health ở Trang 4?
+ Growth Plan có người chịu trách nhiệm phù hợp với RACI?
+Hoàn thiện GitHub repository
+Sau khi kiểm tra 4 trang artefact (sản phẩm đầu ra):
+
+Trưởng nhóm kiểm tra repository duy nhất của team đã đúng tên theo format ở Mục 10.
+Cập nhật README.md với tên team, danh sách thành viên, tên dự án và link demo (nếu có).
+Export bài làm thành Day27_AI-Team-Lab_TeamXX.pdf.
+Upload file PDF vào chính repository đã tạo từ đầu Lab.
+Kiểm tra link repository có thể truy cập được.
+Trưởng nhóm nộp bài bằng link GitHub repository của team. Các thành viên không cần nộp lại riêng.
+Tự kiểm
+·
+GATE 5 — Repository sẵn sàng nộp
+Bạn qua gate khi trưởng nhóm đã kiểm tra repo có README.md + PDF tối đa 4 trang, repo truy cập được và team sẵn sàng nộp bằng link repository đó.
+9. Quy tắc dùng AI
+Được dùng AI để:
+
+Gợi ý danh sách stakeholder còn thiếu.
+Gợi ý cách viết Pitch ngắn hơn, rõ hơn.
+Kiểm tra RACI có thiếu A/R/C/I.
+Gợi ý các role (vai trò) / capability (năng lực) phổ biến trong AI team.
+Gợi ý cách chuyển một vấn đề Team Health thành hành động cụ thể.
+Không được dùng AI để:
+
+Bịa stakeholder không tồn tại trong dự án.
+Bịa số liệu/feedback để làm Pitch thuyết phục hơn.
+Tự quyết định RACI thay team mà không có thảo luận.
+Tạo một AI Team "đẹp trên giấy" nhưng không phản ánh nguồn lực thực tế.
+Viết Growth Plan chung chung mà team không cam kết thực hiện.
+10. Nộp bài
+Hình thức nộp: bài theo team, không nộp cá nhân.
+Trưởng nhóm chịu trách nhiệm tạo 01 GitHub repository duy nhất cho cả team ngay từ đầu. Tất cả thành viên cùng làm và cập nhật bài trên repo đó. Sau khi hoàn thành Lab, team nộp bài bằng chính link GitHub repository này. Không nộp file rời và không tạo repo riêng cho từng thành viên.
+
+Tên repository
+Track1_Day27_TeamXX_TenDuAn
+Ví dụ:
+
+Track1_Day27_Team03_VLearn
+Copy
+Cấu trúc repository bắt buộc
+Track1_Day27_TeamXX_TenDuAn/
+├── README.md
+└── Day27_AI-Team-Lab_TeamXX.pdf
+Copy
+File README.md cần có
+# Track 1 - Day 27 — AI Team Lab
+
+- Team:
+- Thành viên (3–5 người):
+- Tên dự án:
+- Link sản phẩm/demo (nếu có):
+Bài nộp
+File: Day27_AI-Team-Lab_TeamXX.pdf
+
+
+### File PDF tối đa 4 trang
+
+#### Trang 1 — Stakeholder Map & Strategy
+- Stakeholder Map
+- Stance (mức độ ủng hộ)
+- 2 stakeholder cần tận dụng sự ủng hộ
+- 2 stakeholder cần ưu tiên thuyết phục
+- Hành động cụ thể
+
+#### Trang 2 — Pitch & RACI
+- Pitch "Conclusion First (kết luận trước)"
+- Phản biện chính + cách xử lý
+- RACI Matrix
+
+#### Trang 3 — AI Team Design
+- Team Architecture
+- Core Roles (vai trò cốt lõi)
+- Capability Gap (năng lực còn thiếu)
+- Priority Resourcing (cách bổ sung năng lực)
+
+#### Trang 4 — Team Health & Growth Plan
+- Team Health Score (điểm sức khỏe team)
+- Vấn đề ưu tiên
+- Competency (năng lực) cần nâng
+- Growth Plan 30 ngày
+
+### Trước khi gửi link repo
+
+- [ ] Repo đúng tên theo format.
+- [ ] Repo có `README.md`.
+- [ ] Repo có đúng 01 file PDF bài làm.
+- [ ] PDF không quá 4 trang.
+- [ ] README ghi đủ tên team, thành viên và tên dự án.
+- [ ] Repo mở quyền truy cập để giảng viên có thể xem.
+- [ ] **Trưởng nhóm** gửi **link GitHub repository của team** để nộp bài; các thành viên không cần tạo hoặc nộp repo riêng.
+
+### Sáu gate đánh giá (Rubric)
+
+| Gate | Đạt khi | Dấu hiệu chưa đạt |
+|---|---|---|
+| **0. Scope (phạm vi)** | Cùng một dự án, mục tiêu và owner (người phụ trách) tổng hợp rõ ràng | Mỗi thành viên đang hiểu Lab theo một phạm vi khác nhau |
+| **1. Stakeholder** | ≥ 6 stakeholder cụ thể, map Influence × Interest, dùng được Champion / Blocker / Supporter / Bystander và có stance (mức độ ủng hộ) + chiến lược hành động | Chỉ gắn nhãn theo quadrant mà không kiểm tra stance thực tế; stakeholder chung chung; không có action (hành động) |
+| **2. Pitch & RACI** | Pitch có conclusion (kết luận) + evidence (bằng chứng) + small ask (đề nghị hành động nhỏ); mỗi task có 1 A | Pitch kể dài, hứa quá bằng chứng, RACI có nhiều A hoặc không có A |
+| **3. AI Team Design** | Architecture (cấu trúc) có lý do, role (vai trò) phù hợp, có capability gap (năng lực còn thiếu) + Priority Resourcing (cách bổ sung năng lực) | Liệt kê quá nhiều chức danh, không nói vì sao cần, chỉ biết "tuyển thêm người" |
+| **4. Team Health & Growth** | Có health score (điểm sức khỏe team), vấn đề ưu tiên, competency (năng lực) cần nâng, plan 30 ngày có owner (người phụ trách) / deadline (hạn hoàn thành) | Plan chung chung, không đo được, không ai chịu trách nhiệm |
+| **5. Nộp bài** | Repo đúng cấu trúc, có `README.md` + PDF tối đa 4 trang, link repo truy cập được | Nộp file rời, thiếu README/PDF, repo không truy cập được hoặc sai cấu trúc |
